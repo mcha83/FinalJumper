@@ -63,8 +63,6 @@ public class Game extends SurfaceView implements Runnable {
 
     private Context context;
 
-    private  ImageView imgPop;
-    private TextView txtPopLose;
     private Button buttLose1, buttLose2;
 
     public Game(Context context, Bitmap buffer) {
@@ -175,7 +173,6 @@ public class Game extends SurfaceView implements Runnable {
 
         buttLose1 = (Button) popupView.findViewById(R.id.buttonOver);
         buttLose2 = (Button) popupView.findViewById(R.id.buttonOver2);
-        txtPopLose = (TextView) popupView.findViewById(R.id.textView3);
         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
 
         buttLose1.setOnClickListener(new Button.OnClickListener(){

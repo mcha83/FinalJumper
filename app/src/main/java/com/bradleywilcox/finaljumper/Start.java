@@ -19,7 +19,7 @@ import android.widget.TextView;
 
 public class Start extends AppCompatActivity implements View.OnClickListener {
 
-    public TextView txt1, txtPop, txtPop2;
+    public TextView txt1;
     public Button butt1, butt2;
 
     @Override

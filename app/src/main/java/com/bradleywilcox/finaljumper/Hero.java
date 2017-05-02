@@ -1,24 +1,8 @@
 package com.bradleywilcox.finaljumper;
 
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.Paint;
 import android.graphics.PointF;
-import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
-import android.media.AudioAttributes;
-import android.media.AudioManager;
-import android.media.SoundPool;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.util.TypedValue;
-
-import java.util.HashSet;
-import java.util.Set;
-
 
 /**
  *
@@ -34,7 +18,6 @@ public class Hero extends GameObject{
     public static final int WIDTH = 30;
     public static final int HEIGHT = 30;
 
-    private Paint paint;
     private PointF velocity;
     private RectF drawingRect;
 
@@ -43,8 +26,7 @@ public class Hero extends GameObject{
     public Hero(int x, int y) {
         this.width = WIDTH;
         this.height = HEIGHT;
-        paint = new Paint();
-        paint.setColor(Color.RED);
+
         velocity = new PointF(0, 0);
 
         this.x = x;
@@ -69,7 +51,7 @@ public class Hero extends GameObject{
 
         if(x > Game.BUFFER_WIDTH)
             x = 0;
-        else if(x < 0)
+        else if(x + WIDTH < 0)
             x = Game.BUFFER_WIDTH;
 
         // "try" to simulate the feel of the accelerometer control on the device

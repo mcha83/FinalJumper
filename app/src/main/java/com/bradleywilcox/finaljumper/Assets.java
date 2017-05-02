@@ -65,7 +65,6 @@ public class Assets {
         soundHighScoreId = soundPool.load(context, R.raw.tada, 1);
         soundGameOverId = soundPool.load(context, R.raw.lost, 1);
         soundHitObject = soundPool.load(context, R.raw.hit, 1);
-        // add other sounds
     }
 
 

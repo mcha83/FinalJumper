@@ -19,7 +19,6 @@ public class Score extends GameObject {
     private Paint paint;
 
     private float highScoreY;
-    private Paint hsPaint;
 
     public Score(){
         highscore = Data.HighScore;
@@ -30,8 +29,6 @@ public class Score extends GameObject {
         this.highScoreY = (Game.BUFFER_HEIGHT / 2) - highscore;
 
         paint = new Paint();
-        paint.setColor(Color.GREEN);
-        hsPaint = new Paint();
         paint.setColor(Color.WHITE);
     }
 
@@ -52,8 +49,9 @@ public class Score extends GameObject {
         if(this.score > highscore){
             Data.HighScore = this.score;
 
-            //if(highscore > 0)
-            gameHigh(true);
+            if(highscore > 0)
+                gameHigh(true);
+
             counter+=1;
         }
         else
